@@ -35,8 +35,8 @@ const Project = (props) => {
             title: 'React 를 이용한 포트폴리오 사이트',
             skills: 'React, React-router, javascript, html, css',
             imagePath: '/image/protfoilo.png',
-            demo: 'https://limhoooo-game-coordinates.netlify.app',
-            github: 'https://github.com/limhoooo/javascript',
+            demo: 'https://limhoooo-portfolio-fe.netlify.app',
+            github: 'https://github.com/limhoooo/portfolio',
         }
     ]
     return (

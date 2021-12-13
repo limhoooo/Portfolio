@@ -23,7 +23,7 @@ class Main extends React.Component {
                 <ReactFullpage
                     css3={false}
                     // navigation={true}
-                    scrollingSpeed={'1200'}
+                    scrollingSpeed={'800'}
                     onLeave={this.onLeave.bind(this)}
                     afterLoad={this.afterLoad.bind(this)}
                     parallax={true}

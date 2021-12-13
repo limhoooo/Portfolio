@@ -29,7 +29,7 @@ const Skills = (props) => {
                     <SkillsItem skillName='mysql' />
                 </div>
                 <div className='skillTitle'>
-                    <p >BackEnd</p>
+                    <p >Etc</p>
                 </div>
                 <div className="skillsBox">
                     <SkillsItem skillName='babel' />
