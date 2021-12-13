@@ -1,38 +1,464 @@
-.App {
-  text-align: center;
+#root {
+    position: relative;
+}
+#root,.section {
+    width: 100%;
+    height: 100% !important;
+}
+.header {
+   position: fixed;
+    z-index: 1;
+    width: 100%; 
+}
+.header ul{
+   padding: 1rem 3rem;
+    text-align: right;
+}
+.header ul li{
+    font-size: 2rem;
+    margin-right: 3rem;
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+}
+.header ul li:hover {
+    color: deeppink;
+}
+.active {
+    position: relative;
+}
+.active::after {
+        position: absolute;
+    width: 100%;
+    height: 2px;
+    content: "";
+    background-color: #fff;
+    bottom: -0.3rem;
+    left: 0;
+}
+.active:hover {
+color: deeppink !important;
+}
+.section{
+background-image: url('./img/bg.png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.sectionBox {
+    padding: 2rem;
+    /* padding-left: 25%; */
+}
+#fullpage-wrapper {
+    width: 100%;
+    height: 100%;
+}
+.fp-tableCell {
+    height: 100% !important;
+}
+.black{
+    background-color: black;
+}
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.titleText {
+    color: white;
+    font-size: 4rem;
+margin: 1rem 0;
+}
+.homeBanner{
+    
+}
+.homeBannerBox{
+    width: 100%;
+    height: 100%;
+    border-bottom: none;
+    position: relative;
+}
+.protFolioBox{
+    position: absolute;
+    bottom: 1rem;
+    right: 0;
+}
+/* homeBanne */
+.homeBanner {
+    position: relative;
+}
+.popupWidth {
+    width: 100% !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+/* 반응형 */
+ .protFolioBox .text {
+    margin: 0;
+    color: #ddd;
+    text-align: right;
+    letter-spacing: 0.2em;
+    animation: play-state 1s  alternate;
+    font-size: 6rem;
+    letter-spacing: 2rem;
+    line-height: 1.2em;
+
+}
+.protFolioBox .text1 {
+}
+.protFolioBox .text2 {
+}
+.protFolioBox .text3 {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.leftBar {
+    position: fixed;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    z-index: 1;
+    background: rgb(43, 46, 51);
+}
+.profileBox {
+    text-align: center;
+    padding-top: 3rem;
+}
+.profileBox .profileImg {
+    width: 8rem;
+    height: 8rem;
+    display: inline-block;
+    background-image: url('./img/profile.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50%;
+}
+
+.skills {
+    text-align: center;
+}
+.skills .skillsIcon {
+    width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+.skills .skillTitle{
+position: relative;
+    text-align: left;
+}
+.skills .skillTitle p{
+
+    font-size: 1.6rem;
+    color: #fff;
+}
+.skills .skillTitle::before{
+width: 100%;
+    height: 2px;
+    display: block;
+    content: "";
+    background-color: #444;
+    top: 40px;
+    position: absolute;
+    left: 0;
+}
+
+.skillsBox {
+    display: flex;
+    justify-content: flex-start;
+    margin: 1.5rem auto;
+}
+
+.skillsBox .skillsItem{
+    width: 10%;
+}
+.skillsBox p {
+    margin-top: 0;
+    font-weight: bold;
+    color: white;
+}
+.skills .babel{
+    background-image: url('./img/icon/babel.png');
+}
+.skills .css{
+    background-image: url('./img/icon/css.png');
+}
+.skills .html{
+    background-image: url('./img/icon/html.png');
+}
+.skills .java{
+    background-image: url('./img/icon/java.png');
+}
+.skills .jquery{
+    background-image: url('./img/icon/jquery.png');
+}
+.skills .javascript{
+    background-image: url('./img/icon/javascript.png');
+}
+.skills .mysql{
+    background-image: url('./img/icon/mysql.png');
+}
+.skills .netlify{
+    background-image: url('./img/icon/netlify.png');
+}
+.skills .nginx{
+    background-image: url('./img/icon/nginx.png');
+}
+.skills .react{
+    background-image: url('./img/icon/react.png');
+}
+.skills .ts{
+    background-image: url('./img/icon/ts.png');
+}
+.skills .vue{
+    background-image: url('./img/icon/vue.png');
+}
+
+.skills .webpack{
+    background-image: url('./img/icon/webpack.png');
+}
+.skills .vuetify{
+    background-image: url('./img/icon/vuetify.png');
+}
+.skills .vuex{
+    background-image: url('./img/icon/vuex.png');
+}
+.dispalyNone {
+        display: none;
+    }
+    .AnotherItem {
+        display: flex;
+    justify-content: center;
+    margin: 5rem;
+    }
+    .AnotherItem p a:hover {
+        color: crimson;
+    } 
+    .AnotherItem span {
+
+    }
+    .github {
+            background-image: url('./img/icon/github.png');
+        border-radius: 50px;
+         width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    }
+    .tistory{
+        background-image: url('./img/icon/tistory.png');
+        border-radius: 50px;
+         width: 4rem;
+    height: 4rem;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50px;
+    }
+    .AnotherItem p a {
+font-size: 2rem;
+color: #aaa;
+    padding-top: 0.3rem;
+    padding-left: 1em;
+    margin: 0;
+    cursor: pointer;
+    }
+@media screen and (max-width: 48rem) {
+    .protFolioBox .text{
+        font-size: 2.5rem;
+    letter-spacing: 1rem;
+    line-height: 1.2em;
+    }
+    
+    .titleText{
+        font-size: 2rem;
+    }
+    .sectionBox{
+        padding: 1rem;
+    }
+    .skillsBox {
+        flex-flow: row wrap;
+        margin: 1rem auto;
+    }
+    .skillsBox .skillsItem{
+            width: 20%;
+    }
+    .skills .skillsIcon {
+            width: 2rem;
+    height: 2rem;
+    }
+    .skills .skillTitle p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    .skills .skillTitle::before {
+        top: 34px;
+    }
+    .aboutBox {
+        margin: 1.5rem auto !important;
+    }
+    .aboutBoxItem .icon{
+        font-size: 2rem !important;
+    }
+}
+
+
+@keyframes play-state{
+  to{
+    margin: 0%;
+  }
+  from{
+    margin: 50%;
+  }
+}
+@keyframes arrow{
+  to{
+    margin-top: 2rem;
+  }
+  from{
+    margin-top: 0;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* about */
+.about {
+    text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutBox {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 4.5rem auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.aboutBox .aboutBoxItem{
+    width: 40%;
+}
+.aboutBoxItem{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutBoxItem .icon {
+    width: 30%;
+    font-size: 3rem;
+}
+.aboutBoxItem .contentBox {
+    width: 70%;
+}
+.contentBox .title {
+    color: white;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.contentBox .content {
+    color: #ccc;
+    font-size: 1.2rem;
+}
+.borderBox {
+        padding-top: 4rem;
+    width: 100%;
+    height: 100%;
+    border-left: 3px solid #043f87;
+    border-right: 3px solid #043f87;
+}
+
+@media screen and (max-width: 48rem) {
+
+    .borderBox {
+        padding-top: 2rem;
+    }
+    .aboutBox .aboutBoxItem{
+        margin-top: 0.5rem;
+    width: 100%;
+}
+
+.contentBox .title {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+}
+.contentBox .content {
+    color: #fff;
+    font-size: 1rem;
+        margin-top: 0.5em;
+}
+}
+
+.w80p{
+    width: 80%;
+}
+.mgCenter {
+    margin: 0 auto;
+}
+
+.another {
+    text-align: center;
+
+}
+.project {
+    background-color: #222;
+        height: auto !important;
+    min-height: 100% !important;
+    padding-top: 6rem;
+}
+.projectBox {
+   width: 24%;
+        margin: 1rem;
+    text-align: center;
+    border: 1px solid #fff;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+.projectFlex {
+    text-align: center;
+}
+.projectBox > img {
+    width: 100%;
+        height: 20rem;
+}
+.projectBox > .textBox {
+    color: #fff;
+    padding: 1rem;
+}
+.projectBox > .hoverBox {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 8rem;
+}
+.hoverBox a{
+    font-size: 2rem;
+    border: 1px solid #fff;
+    padding: 1rem;
+    background-color: #aaa;
+}
+.projectBox:hover .hoverBox {
+    display: block !important;
+}
+.projectBox > div .top {
+font-size: 1.5rem;
+    display: block;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+}
+.projectBox > div .bottom {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 1rem;
 }
